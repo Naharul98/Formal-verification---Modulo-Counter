@@ -7,8 +7,7 @@ The model developed follows representation of numbers in the modulo counter as b
 
 ### Properties for the model to verify its correctness of modulo 8 model
 - AG((bit0 & bit1 & bit2) -> AX(!bit0 & !bit1 & !bit2))
-    - Description: In all paths of computation, it should always hold that if we are in state 111 (7 in decimal), then the next state, in all possible paths should be 000 (0 in decimal).
-    -Intuition: If the counter is at state 111, which represents 7 in binary, it should reset back to 0 as it is a modulo counter of 8.
+    - In all paths of computation, it should always hold that if we are in state 111 (7 in decimal), then the next state, in all possible paths should be 000 (0 in decimal). If the counter is at state 111, which represents 7 in binary, it should reset back to 0 as it is a modulo counter of 8.
 
 
 
