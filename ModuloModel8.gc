@@ -1,0 +1,26 @@
+NAME ModuloCounter8
+VAR
+  bit0 : boolean;
+  bit1 : boolean;
+  bit2 : boolean;
+
+INIT
+ !bit2 & !bit1 & !bit0;
+
+RULES
+
+-- Rule 1
+bit2 & bit1 & bit0 :
+	bit2 := false; bit1 := false; bit0 := false
+
+-- Rule 2
+!bit0 :
+  bit0 := true
+
+-- Rule 3
+bit0 & !bit1 :
+   bit1 := true; bit0 := false
+
+-- Rule 4
+!bit2 & bit1 & bit0 :
+  bit2 := true; bit1 := false; bit0 := false
